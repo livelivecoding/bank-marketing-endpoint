@@ -1,0 +1,17 @@
+{
+    "name": "cloudrun-helloworld",
+    "version": "1.0.0",
+    "description": "Simple hello world sample in Node",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "dependencies": {
+      "@google-cloud/automl": "^2.1.0",
+      "cors": "^2.8.5",
+      "express": "^4.17.1"
+    }
+  }
+  
