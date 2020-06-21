@@ -1,0 +1,14 @@
+steps:
+# Construir la imagen de docker
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/streaming-analytics-showcase/bm-endpoint', '.']
+
+# Guardar la imagen en container registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/streaming-analytics-showcase/bm-endpoint']
+
+  #Desplegar en Cloud Run
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'bm-endpoint', '--image', 'gcr.io/streaming-analytics-showcase/bm-endpoint', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
+images:
+- gcr.io/streaming-analytics-showcase/bm-endpoint
