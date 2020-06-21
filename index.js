@@ -61,5 +61,5 @@ app.get('/', async(req, res) => { //localhost:8080?duration=200
 
 const port = process.env.PORT || 8080
 app.listen(port, () => {
-    console.log('Hola mama, estoy en la TV', port)
+    console.log('Hola mama, estoy en la Tele', port)
 })
